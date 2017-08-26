@@ -6,7 +6,7 @@
 	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>Paper Dashboard by Creative Tim</title>
+	<title>Pacientes</title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -43,57 +43,51 @@
     	<div class="sidebar-wrapper">
             <div class="logo">
                 <a href="http://www.creative-tim.com" class="simple-text">
-                    Creative Tim
+                   <img src="assets/img/logo.png" class="img-responsive">
                 </a>
             </div>
 
             <ul class="nav">
                 <li>
-                    <a href="dashboard.html">
+                    <a href="index.html">
                         <i class="ti-panel"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li>
-                    <a href="user.html">
-                        <i class="ti-user"></i>
-                        <p>User Profile</p>
+                <li >
+                    <a href="ovitrampas.html">
+                        <i class="ti-bag"></i>
+                        <p>Ovitrampas</p>
                     </a>
                 </li>
                 <li class="active">
-                    <a href="table.html">
-                        <i class="ti-view-list-alt"></i>
-                        <p>Table List</p>
+                    <a href="pacientes.html">
+                        <i class="ti-user"></i>
+                        <p>Pacientes</p>
                     </a>
                 </li>
                 <li>
-                    <a href="typography.html">
-                        <i class="ti-text"></i>
-                        <p>Typography</p>
+                    <a href="recorridos.html">
+                        <i class="ti-calendar"></i>
+                        <p>Recorridos</p>
                     </a>
                 </li>
                 <li>
-                    <a href="icons.html">
-                        <i class="ti-pencil-alt2"></i>
-                        <p>Icons</p>
+                    <a href="vehiculos.html">
+                        <i class="ti-truck"></i>
+                        <p>Vehiculos</p>
                     </a>
                 </li>
                 <li>
-                    <a href="maps.html">
-                        <i class="ti-map"></i>
-                        <p>Maps</p>
+                    <a href="operarios.html">
+                        <i class="ti-user"></i>
+                        <p>Operarios</p>
                     </a>
-                </li>
-                <li>
-                    <a href="notifications.html">
-                        <i class="ti-bell"></i>
-                        <p>Notifications</p>
-                    </a>
-                </li>
+                </li> 
 				<li class="active-pro">
-                    <a href="upgrade.html">
+                    <a href="#">
                         <i class="ti-export"></i>
-                        <p>Upgrade to PRO</p>
+                        <p>Salir</p>
                     </a>
                 </li>
             </ul>
@@ -110,21 +104,21 @@
                         <span class="icon-bar bar2"></span>
                         <span class="icon-bar bar3"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Table List</a>
+                    <a class="navbar-brand" href="#">Pacietes</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="ti-panel"></i>
-								<p>Stats</p>
+								<p>Estadisticas</p>
                             </a>
                         </li>
                         <li class="dropdown">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="ti-bell"></i>
                                     <p class="notification">5</p>
-									<p>Notifications</p>
+									<p>Notificaciones</p>
 									<b class="caret"></b>
                               </a>
                               <ul class="dropdown-menu">
@@ -138,11 +132,10 @@
 						<li>
                             <a href="#">
 								<i class="ti-settings"></i>
-								<p>Settings</p>
+								<p>Configuraci&oacute;n</p>
                             </a>
                         </li>
                     </ul>
-
                 </div>
             </div>
         </nav>
@@ -154,135 +147,73 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Striped Table</h4>
-                                <p class="category">Here is a subtitle for this table</p>
+                                <h4 class="title">Pacietes <button type="button" class="btn btn-info btn-fill btn-wd">Agregar nuevo</button></h4>
                             </div>
                             <div class="content table-responsive table-full-width">
                                 <table class="table table-striped">
                                     <thead>
-                                        <th>ID</th>
-                                    	<th>Name</th>
-                                    	<th>Salary</th>
-                                    	<th>Country</th>
-                                    	<th>City</th>
+                                        <th>Id</th>
+                                        <th>Nombre y Apellido</th>
+                                    	<th>Direccion</th>
+                                    	<th>X</th>
+                                    	<th>Y</th>
+                                    	<th>Acciones</th>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                        	<td>1</td>
-                                        	<td>Dakota Rice</td>
-                                        	<td>$36,738</td>
-                                        	<td>Niger</td>
-                                        	<td>Oud-Turnhout</td>
+                                            <td>1</td>
+                                            <td>Jose Perez</td>
+                                        	<td>Av Libertador 100</td>
+                                        	<td>-36.2121</td>
+                                        	<td>-58.2121</td>
+                                            <td>
+                                                <button type="button" class="btn btn-info btn-fill">Editar</button>
+                                                <button type="button" class="btn btn-info btn-fill">Diagnostico</button>
+                                                <button type="button" class="btn btn-info btn-fill" onclick="location.href = 'mapa_generico.html';">Mapa</button>
+                                            </td>
                                         </tr>
                                         <tr>
-                                        	<td>2</td>
-                                        	<td>Minerva Hooper</td>
-                                        	<td>$23,789</td>
-                                        	<td>Curaçao</td>
-                                        	<td>Sinaai-Waas</td>
+                                            <td>2</td>
+                                            <td>Roberto Cantalapiedra</td>
+                                        	<td>Av Libertador 200</td>
+                                        	<td>-36.2121</td>
+                                        	<td>-58.2121</td>
+                                            <td>
+                                                <button type="button" class="btn btn-info btn-fill">Editar</button>
+                                                <button type="button" class="btn btn-info btn-fill">Diagnostico</button>
+                                                <button type="button" class="btn btn-info btn-fill" onclick="location.href = 'mapa_generico.html';">Mapa</button>
+                                            </td>
                                         </tr>
                                         <tr>
-                                        	<td>3</td>
-                                        	<td>Sage Rodriguez</td>
-                                        	<td>$56,142</td>
-                                        	<td>Netherlands</td>
-                                        	<td>Baileux</td>
+                                            <td>3</td>
+                                            <td>Arnaldo Garcia</td>
+                                        	<td>Av Libertador 300</td>
+                                        	<td>-36.2121</td>
+                                        	<td>-58.2121</td>
+                                            <td>
+                                                <button type="button" class="btn btn-info btn-fill">Editar</button>
+                                                <button type="button" class="btn btn-info btn-fill">Diagnostico</button>
+                                                <button type="button" class="btn btn-info btn-fill" onclick="location.href = 'mapa_generico.html';">Mapa</button>
+                                            </td>
                                         </tr>
                                         <tr>
-                                        	<td>4</td>
-                                        	<td>Philip Chaney</td>
-                                        	<td>$38,735</td>
-                                        	<td>Korea, South</td>
-                                        	<td>Overland Park</td>
-                                        </tr>
-                                        <tr>
-                                        	<td>5</td>
-                                        	<td>Doris Greene</td>
-                                        	<td>$63,542</td>
-                                        	<td>Malawi</td>
-                                        	<td>Feldkirchen in Kärnten</td>
-                                        </tr>
-                                        <tr>
-                                        	<td>6</td>
-                                        	<td>Mason Porter</td>
-                                        	<td>$78,615</td>
-                                        	<td>Chile</td>
-                                        	<td>Gloucester</td>
-                                        </tr>
+                                            <td>4</td>
+                                            <td>Cosme Fsulanito</td>
+                                        	<td>Av Libertador 400</td>
+                                        	<td>-36.2121</td>
+                                        	<td>-58.2121</td>
+                                            <td>
+                                                <button type="button" class="btn btn-info btn-fill">Editar</button>
+                                                <button type="button" class="btn btn-info btn-fill">Diagnostico</button>
+                                                <button type="button" class="btn btn-info btn-fill" onclick="location.href = 'mapa_generico.html';">Mapa</button>
+                                            </td>
+                                        </tr>                                                                                                                        
                                     </tbody>
                                 </table>
 
                             </div>
                         </div>
                     </div>
-
-
-                    <div class="col-md-12">
-                        <div class="card card-plain">
-                            <div class="header">
-                                <h4 class="title">Table on Plain Background</h4>
-                                <p class="category">Here is a subtitle for this table</p>
-                            </div>
-                            <div class="content table-responsive table-full-width">
-                                <table class="table table-hover">
-                                    <thead>
-                                        <th>ID</th>
-                                    	<th>Name</th>
-                                    	<th>Salary</th>
-                                    	<th>Country</th>
-                                    	<th>City</th>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                        	<td>1</td>
-                                        	<td>Dakota Rice</td>
-                                        	<td>$36,738</td>
-                                        	<td>Niger</td>
-                                        	<td>Oud-Turnhout</td>
-                                        </tr>
-                                        <tr>
-                                        	<td>2</td>
-                                        	<td>Minerva Hooper</td>
-                                        	<td>$23,789</td>
-                                        	<td>Curaçao</td>
-                                        	<td>Sinaai-Waas</td>
-                                        </tr>
-                                        <tr>
-                                        	<td>3</td>
-                                        	<td>Sage Rodriguez</td>
-                                        	<td>$56,142</td>
-                                        	<td>Netherlands</td>
-                                        	<td>Baileux</td>
-                                        </tr>
-                                        <tr>
-                                        	<td>4</td>
-                                        	<td>Philip Chaney</td>
-                                        	<td>$38,735</td>
-                                        	<td>Korea, South</td>
-                                        	<td>Overland Park</td>
-                                        </tr>
-                                        <tr>
-                                        	<td>5</td>
-                                        	<td>Doris Greene</td>
-                                        	<td>$63,542</td>
-                                        	<td>Malawi</td>
-                                        	<td>Feldkirchen in Kärnten</td>
-                                        </tr>
-                                        <tr>
-                                        	<td>6</td>
-                                        	<td>Mason Porter</td>
-                                        	<td>$78,615</td>
-                                        	<td>Chile</td>
-                                        	<td>Gloucester</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-
-                            </div>
-                        </div>
-                    </div>
-
-
                 </div>
             </div>
         </div>
