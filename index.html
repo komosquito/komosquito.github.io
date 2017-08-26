@@ -382,11 +382,8 @@
         }
 
         (function(){
-            // user ovitrampa descacharrado
-
-            // map.data.loadGeoJson('./assets/ovitrampas.json');
-            // map.data.loadGeoJson('./assets/descacharrado.json');
-            // map.data.loadGeoJson('./assets/pacientes.json');
+            demo.initChartist();
+            
             document.getElementById('user').addEventListener('click', function () {
                 demo.initGoogleMaps('./assets/pacientes.json');
             });
