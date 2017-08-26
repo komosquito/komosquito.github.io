@@ -259,16 +259,16 @@
                         <div class="card">
                             <div class="header">
                                 <button id="user" class="btn">
-                                    <i class="ti-user"></i>
                                     Pacientes
                                 </button>
                                 <button id="ovitrampas" class="btn">
-                                    <i class="ti-user"></i>
                                     Ovitrampas
                                 </button>
                                 <button id="descacharrado" class="btn">
-                                    <i class="ti-user"></i>
                                     Descacharrado
+                                </button>
+                                <button id="heat" class="btn">
+                                    Mapa de Calor
                                 </button>
                             </div>
                             <div class="content">
@@ -398,6 +398,9 @@
             });
             document.getElementById('ovitrampas').addEventListener('click', function () {
                 demo.initGoogleMaps('./assets/ovitrampas.json');
+            });
+            document.getElementById('heat').addEventListener('click', function () {
+                initHMap();
             });
         })();
 	</script>
