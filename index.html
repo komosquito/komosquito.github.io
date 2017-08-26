@@ -252,11 +252,22 @@
                     <div class="col-md-6">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Ovitrampas</h4>
-                                <p class="category">Porcentaje de activas</p>
+                                <button id="user" class="btn">
+                                    <i class="ti-user"></i>
+                                    Pacientes
+                                </button>
+                                <button id="ovitrampas" class="btn">
+                                    <i class="ti-user"></i>
+                                    Ovitrampas
+                                </button>
+                                <button id="descacharrado" class="btn">
+                                    <i class="ti-user"></i>
+                                    Descacharrado
+                                </button>
                             </div>
                             <div class="content">
-                                <div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div>
+
+                                <!--div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div>
 
                                 <div class="footer">
                                     <div class="chart-legend">
@@ -267,7 +278,16 @@
                                     <div class="stats">
                                         <i class="ti-timer"></i> Campaign sent 2 days ago
                                     </div>
+                                </div-->
+
+                                <div class="container-fluid">
+                                    <div class="card card-map">
+                                        <div class="map">
+                                            <div id="map"></div>
+                                        </div>
+                                    </div>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -345,7 +365,10 @@
     <script src="assets/js/bootstrap-notify.js"></script>
 
     <!--  Google Maps Plugin    -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+    <script 
+        async defer 
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVbaj7qPM1sNdwM8ChXrP1K8uFxbErBWY&callback=initMap">
+    </script>
 
     <!-- Paper Dashboard Core javascript and methods for Demo purpose -->
 	<script src="assets/js/paper-dashboard.js"></script>
@@ -354,9 +377,26 @@
 	<script src="assets/js/demo.js"></script>
 
 	<script type="text/javascript">
-    	$(document).ready(function(){
-        	demo.initChartist();
-    	});
+        function initMap() {
+            demo.initGoogleMaps();
+        }
+
+        (function(){
+            // user ovitrampa descacharrado
+
+            // map.data.loadGeoJson('./assets/ovitrampas.json');
+            // map.data.loadGeoJson('./assets/descacharrado.json');
+            // map.data.loadGeoJson('./assets/pacientes.json');
+            document.getElementById('user').addEventListener('click', function () {
+                demo.initGoogleMaps('./assets/pacientes.json');
+            });
+            document.getElementById('descacharrado').addEventListener('click', function () {
+                demo.initGoogleMaps('./assets/descacharrado.json');
+            });
+            document.getElementById('ovitrampas').addEventListener('click', function () {
+                demo.initGoogleMaps('./assets/ovitrampas.json');
+            });
+        })();
 	</script>
 
 </html>
