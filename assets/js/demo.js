@@ -110,7 +110,7 @@ demo = {
         });
     },
 
-    initGoogleMaps: function(){
+    initGoogleMaps: function(json){
         var myLatlng = new google.maps.LatLng(-34.5294374, -58.5416533);
         var mapOptions = {
           zoom: 13,
@@ -121,7 +121,10 @@ demo = {
         }
         var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-        map.data.loadGeoJson('./assets/ovitrampas.json');
+        // map.data.loadGeoJson('./assets/ovitrampas.json');
+        // map.data.loadGeoJson('./assets/descacharrado.json');
+        // map.data.loadGeoJson('./assets/pacientes.json');
+        if (json) json = map.data.loadGeoJson(json);
 
         var marker = new google.maps.Marker({
             position: myLatlng,
