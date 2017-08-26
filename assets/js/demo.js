@@ -111,7 +111,7 @@ demo = {
     },
 
     initGoogleMaps: function(){
-        var myLatlng = new google.maps.LatLng(40.748817, -73.985428);
+        var myLatlng = new google.maps.LatLng(-34.5294374, -58.5416533);
         var mapOptions = {
           zoom: 13,
           center: myLatlng,
@@ -120,6 +120,8 @@ demo = {
 
         }
         var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+        map.data.loadGeoJson('./ovitrampas.json');
 
         var marker = new google.maps.Marker({
             position: myLatlng,
@@ -206,7 +208,7 @@ demo = {
         var dataSales = {
           labels: ['9:00AM', '12:00AM', '3:00PM', '6:00PM', '9:00PM', '12:00PM', '3:00AM', '6:00AM'],
           series: [
-             [287, 385, 490, 562, 594, 626, 698, 895, 952],
+            [287, 385, 490, 562, 594, 626, 698, 895, 952],
             [67, 152, 193, 240, 387, 435, 535, 642, 744],
             [23, 113, 67, 108, 190, 239, 307, 410, 410]
           ]

@@ -208,7 +208,11 @@
     <script src="assets/js/bootstrap-notify.js"></script>
 
     <!--  Google Maps Plugin    -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+    <!--script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script-->
+    <script 
+        async defer 
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVbaj7qPM1sNdwM8ChXrP1K8uFxbErBWY&callback=initMap">
+    </script>
 
     <!-- Paper Dashboard Core javascript and methods for Demo purpose -->
 	<script src="assets/js/paper-dashboard.js"></script>
@@ -216,10 +220,10 @@
 	<!-- Paper Dashboard DEMO methods, don't include it in your project! -->
 	<script src="assets/js/demo.js"></script>
 
-    <script>
-        $().ready(function(){
+    <script type="text/javascript">
+        function initMap () {
             demo.initGoogleMaps();
-        });
+        }
     </script>
 
 </html>
