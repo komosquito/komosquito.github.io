@@ -121,7 +121,7 @@ demo = {
         }
         var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-        map.data.loadGeoJson('./../ovitrampas.json');
+        map.data.loadGeoJson('./assets/ovitrampas.json');
 
         var marker = new google.maps.Marker({
             position: myLatlng,
