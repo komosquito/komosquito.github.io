@@ -258,11 +258,22 @@
                     <div class="col-md-6">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Ovitrampas</h4>
-                                <p class="category">Porcentaje de activas</p>
+                                <button id="user" class="btn">
+                                    Pacientes
+                                </button>
+                                <button id="ovitrampas" class="btn">
+                                    Ovitrampas
+                                </button>
+                                <button id="descacharrado" class="btn">
+                                    Descacharrado
+                                </button>
+                                <button id="heat" class="btn">
+                                    Mapa de Calor
+                                </button>
                             </div>
                             <div class="content">
-                                <div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div>
+
+                                <!--div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div>
 
                                 <div class="footer">
                                     <div class="chart-legend">
@@ -273,7 +284,16 @@
                                     <div class="stats">
                                         <i class="ti-timer"></i> Campaign sent 2 days ago
                                     </div>
+                                </div-->
+
+                                <div class="container-fluid">
+                                    <div class="card card-map">
+                                        <div class="map">
+                                            <div id="map"></div>
+                                        </div>
+                                    </div>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -345,18 +365,44 @@
     <script src="assets/js/bootstrap-notify.js"></script>
 
     <!--  Google Maps Plugin    -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+    <script 
+        async defer 
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVbaj7qPM1sNdwM8ChXrP1K8uFxbErBWY&libraries=visualization&callback=initHMap">
+    </script>
 
     <!-- Paper Dashboard Core javascript and methods for Demo purpose -->
 	<script src="assets/js/paper-dashboard.js"></script>
 
 	<!-- Paper Dashboard DEMO methods, don't include it in your project! -->
 	<script src="assets/js/demo.js"></script>
+	<script src="assets/js/heatmap.js"></script>
 
 	<script type="text/javascript">
-    	$(document).ready(function(){
-        	demo.initChartist();
-    	});
+
+        function initMap() {
+            demo.initGoogleMaps();
+        }
+
+        function initHMap() {
+            heat.initMap();
+        }
+
+        (function(){
+            demo.initChartist();
+
+            document.getElementById('user').addEventListener('click', function () {
+                demo.initGoogleMaps('./assets/pacientes.json');
+            });
+            document.getElementById('descacharrado').addEventListener('click', function () {
+                demo.initGoogleMaps('./assets/descacharrado.json');
+            });
+            document.getElementById('ovitrampas').addEventListener('click', function () {
+                demo.initGoogleMaps('./assets/ovitrampas.json');
+            });
+            document.getElementById('heat').addEventListener('click', function () {
+                initHMap();
+            });
+        })();
 	</script>
 
 </html>
